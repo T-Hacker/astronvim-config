@@ -324,27 +324,16 @@ local config = {
       }
       return config -- return final config table
     end,
-    -- treesitter = function(config)
-    --     config.incremental_selection = {
-    --         enable = true,
-    --         keymaps = {
-    --             init_selection = "<C-k>",
-    --             node_incremental = "<C-k>",
-    --             scope_incremental = "<nop>",
-    --             node_decremental = "<C-j>",
-    --         },
-    --     }
-    --     return config
-    -- end,
+    -- treesitter configuration
     treesitter = {
         -- ensure_installed = { "lua" },
         incremental_selection = {
             enable = true,
             keymaps = {
-                init_selection = "<C-k>",
-                node_incremental = "<C-k>",
+                init_selection = "<C-Space>",
+                node_incremental = "<C-Space>",
                 scope_incremental = "<nop>",
-                node_decremental = "<C-j>",
+                node_decremental = "<Backspace>",
             },
         },
     },
