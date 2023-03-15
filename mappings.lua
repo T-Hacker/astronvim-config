@@ -32,6 +32,9 @@ return {
   i = {
     ["<C-s>"] = { "<Esc>:w!<cr>", desc = "Save File" },
   },
+  v = {
+    ["jk"] = { "<Esc>", desc = "Escape visual mode" }
+  },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
