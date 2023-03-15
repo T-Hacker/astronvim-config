@@ -1,3 +1,11 @@
+-- NeoVide configuration.
+if vim.g.neovide then
+  -- Set font to use.
+  vim.o.guifont = "FiraCode Nerd Font Mono:h10:#e-subpixelantialias"
+  -- Set fullscreen.
+  -- vim.g.neovide_fullscreen = true
+end
+
 return {
   -- Configure AstroNvim updates
   updater = {
