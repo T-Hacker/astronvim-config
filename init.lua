@@ -60,6 +60,13 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      clangd = function()
+        return {
+          cmd = { "/opt/llvm-13.0_038/bin/clangd" }
+        }
+      end
+    },
   },
   -- Configure require("lazy").setup() options
   lazy = {
