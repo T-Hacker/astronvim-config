@@ -20,7 +20,8 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "codelldb" },
+      -- ensure_installed = { "codelldb" },
+      ensure_installed = { },
     },
   },
 }
