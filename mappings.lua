@@ -25,9 +25,14 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     -- tab navigation
-    -- TODO: use tabnext and tabNext when fixed
-    ["H"] = { "<cmd>bNext<cr>", desc = "Previous tab" },
-    ["L"] = { "<cmd>bnext<cr>", desc = "Next tab" },
+    ["<S-l>"] = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer"
+    },
+    ["<S-h>"] = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer"
+    },
   },
   i = {
     ["<C-s>"] = { "<Esc>:w!<cr>", desc = "Save File" },
