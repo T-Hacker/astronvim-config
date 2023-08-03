@@ -63,7 +63,7 @@ return {
     config = {
       clangd = function()
         return {
-          cmd = { "/opt/llvm-13.0_038/bin/clangd" }
+          cmd = { "/opt/llvm-15.0_043/bin/clangd" }
         }
       end
     },
