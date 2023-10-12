@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   config = function ()
-    require('nvim-treesitter.install').compilers = {'/opt/llvm-15.0_043/bin/clang'}
+    require('nvim-treesitter.install').compilers = {'/opt/llvm-16.0_044/bin/clang'}
     local configs = require("nvim-treesitter.configs")
     
     configs.setup({
