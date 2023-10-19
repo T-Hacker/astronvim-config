@@ -6,6 +6,22 @@ if vim.g.neovide then
   -- vim.g.neovide_fullscreen = true
 end
 
+-- Workaround for making clipboard work thought SSH.
+local function copy(lines, _)
+  require('osc52').copy(table.concat(lines, '\n'))
+end
+
+local function paste()
+  return {vim.fn.split(vim.fn.getreg(''), '\n'), vim.fn.getregtype('')}
+end
+
+vim.g.clipboard = {
+  name = 'osc52',
+  copy = {['+'] = copy, ['*'] = copy},
+  paste = {['+'] = paste, ['*'] = paste},
+}
+
+-- Rest of configuration.
 return {
   -- Configure AstroNvim updates
   updater = {
